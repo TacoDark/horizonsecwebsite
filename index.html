@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HorizonSec - Arch-Based Penetration Testing OS</title>
+    <meta name="description"
+        content="HorizonSec is a powerful Arch-based Linux distribution designed for penetration testing and security research.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- Background Effects -->
+    <div class="bg-grid"></div>
+    <div class="bg-gradient"></div>
+
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <span class="logo-text">Horizon<span class="logo-accent">Sec</span></span>
+            </div>
+            <div class="nav-links">
+                <a href="#home" class="nav-link active">Home</a>
+                <a href="#features" class="nav-link">Features</a>
+                <a href="#about" class="nav-link">About</a>
+                <a href="#contributors" class="nav-link">Contributors</a>
+                <a href="#download" class="nav-link">Download</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <div class="hero-badge">
+                <span class="badge-dot"></span>
+                Arch-Based Pentesting OS
+            </div>
+            <h1 class="hero-title">
+                Security Testing,<br>
+                <span class="gradient-text">Simplified</span>
+            </h1>
+            <p class="hero-description">
+                HorizonSec is a powerful, lightweight penetration testing distribution built on Arch Linux.
+                Designed for security professionals who demand speed, flexibility, and cutting-edge tools.
+            </p>
+            <div class="hero-buttons">
+                <a href="#download" class="btn btn-primary">
+                    <svg class="btn-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="2">
+                        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                        <polyline points="7 10 12 15 17 10"></polyline>
+                        <line x1="12" y1="15" x2="12" y2="3"></line>
+                    </svg>
+                    Download Now
+                </a>
+                <a href="#features" class="btn btn-secondary">
+                    Learn More
+                    <svg class="btn-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="2">
+                        <line x1="5" y1="12" x2="19" y2="12"></line>
+                        <polyline points="12 5 19 12 12 19"></polyline>
+                    </svg>
+                </a>
+            </div>
+
+            <!-- Terminal Preview -->
+            <div class="terminal-preview">
+                <div class="terminal-header">
+                    <div class="terminal-buttons">
+                        <span class="terminal-btn terminal-btn-close"></span>
+                        <span class="terminal-btn terminal-btn-minimize"></span>
+                        <span class="terminal-btn terminal-btn-maximize"></span>
+                    </div>
+                    <div class="terminal-title">you@horizonsec</div>
+                </div>
+                <div class="terminal-body">
+                    <div class="terminal-line">
+                        <span class="terminal-prompt">$</span>
+                        <span class="terminal-command">fastfetch</span>
+                    </div>
+                    <div class="terminal-line terminal-output">
+                        <span class="terminal-info">OS: HorizonSec Linux x86_64</span>
+                    </div>
+                    <div class="terminal-line terminal-output">
+                        <span class="terminal-info">Kernel: 6.6.x-arch1-1</span>
+                    </div>
+                    <div class="terminal-line terminal-output">
+                        <span class="terminal-info">Shell: zsh 5.9</span>
+                    </div>
+                    <div class="terminal-line">
+                        <span class="terminal-prompt">$</span>
+                        <span class="terminal-command typing-animation">nmap -sV target.local</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="features">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Built for Starters and professionals</h2>
+                <p class="section-description">Everything you need for comprehensive security testing</p>
+            </div>
+
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
+                            <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+                        </svg>
+                    </div>
+                    <h3 class="feature-title">Arch-Based</h3>
+                    <p class="feature-description">
+                        Built on Arch Linux for maximum performance, flexibility, and access to the latest tools
+                        through the AUR.
+                    </p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+                            <polyline points="2 17 12 22 22 17"></polyline>
+                            <polyline points="2 12 12 17 22 12"></polyline>
+                        </svg>
+                    </div>
+                    <h3 class="feature-title">Comprehensive Toolkit</h3>
+                    <p class="feature-description">
+                        Pre-installed with industry-standard tools for network analysis, vulnerability assessment, and
+                        exploitation.
+                    </p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <polyline points="12 6 12 12 16 14"></polyline>
+                        </svg>
+                    </div>
+                    <h3 class="feature-title">Lightweight & Fast</h3>
+                    <p class="feature-description">
+                        Minimal bloat means faster boot times, efficient resource usage, and more power for your
+                        security tasks.
+                    </p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="feature-title">Security First</h3>
+                    <p class="feature-description">
+                        Hardened kernel, secure defaults, and regular updates to keep you protected while testing
+                        others.
+                    </p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <path
+                                d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z">
+                            </path>
+                            <polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
+                            <line x1="12" y1="22.08" x2="12" y2="12"></line>
+                        </svg>
+                    </div>
+                    <h3 class="feature-title">Customizable</h3>
+                    <p class="feature-description">
+                        Full control over your environment. Configure, tweak, and optimize every aspect to match your
+                        workflow.
+                    </p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                            <circle cx="9" cy="7" r="4"></circle>
+                            <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                            <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                        </svg>
+                    </div>
+                    <h3 class="feature-title">Community Driven</h3>
+                    <p class="feature-description">
+                        Join a growing community of security professionals sharing knowledge, tools, and techniques.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2 class="section-title">About HorizonSec</h2>
+                    <p class="about-paragraph">
+                        HorizonSec was created by security professionals, for security professionals. We recognized
+                        the need for a penetration testing distribution that combines the power and flexibility of
+                        Arch Linux with a curated selection of security tools.
+                    </p>
+                    <p class="about-paragraph">
+                        Unlike bloated alternatives, HorizonSec gives you exactly what you need—nothing more, nothing
+                        less.
+                        Whether you're conducting network assessments, web application testing, or wireless security
+                        audits,
+                        HorizonSec provides a solid foundation to build upon.
+                    </p>
+                    <div class="about-stats">
+                        <div class="stat">
+                            <div class="stat-value">20+</div>
+                            <div class="stat-label">Security Tools</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-value">Rolling</div>
+                            <div class="stat-label">Release Model</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-value">Open</div>
+                            <div class="stat-label">Source</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-visual">
+                    <div class="code-block">
+                        <div class="code-header">
+                            <span class="code-title">install.sh</span>
+                        </div>
+                        <div class="code-content">
+                            <code class="code-line"><span class="code-comment"># Install HorizonSec</span></code>
+                            <code class="code-line"><span class="code-keyword">sudo</span> pacman -Syu</code>
+                            <code
+                                class="code-line"><span class="code-keyword">git clone</span> https://github.com/horizonsec/installer</code>
+                            <code class="code-line"><span class="code-keyword">cd</span> installer</code>
+                            <code class="code-line"><span class="code-keyword">./</span>install.sh</code>
+                            <code class="code-line"></code>
+                            <code class="code-line"><span class="code-comment"># Start pentesting</span></code>
+                            <code class="code-line"><span class="code-keyword">horizonsec</span> --init</code>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Download Section -->
+    <!-- Contributors Section -->
+    <section id="contributors" class="contributors">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Meet the Team</h2>
+                <p class="section-description">The people behind HorizonSec</p>
+            </div>
+
+            <div class="contributors-grid">
+                <div class="contributor-card">
+                    <div class="contributor-avatar">
+                        <img src="pfp/ryan.png" alt="Ryan - Website Developer">
+                        <div class="avatar-border"></div>
+                    </div>
+                    <h3 class="contributor-name">Ryan</h3>
+                    <p class="contributor-role">Website Development</p>
+                    <p class="contributor-description">
+                        Does all the misc stuff - from crafting the web presence to handling the little details that
+                        make everything work smoothly.
+                    </p>
+                    <div class="contributor-badge">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <polyline points="16 18 22 12 16 6"></polyline>
+                            <polyline points="8 6 2 12 8 18"></polyline>
+                        </svg>
+                        Developer
+                    </div>
+                </div>
+
+                <div class="contributor-card">
+                    <div class="contributor-avatar">
+                        <img src="pfp/wyind.png" alt="Wyind - Core Developer">
+                        <div class="avatar-border"></div>
+                    </div>
+                    <h3 class="contributor-name">Wyind</h3>
+                    <p class="contributor-role">Core Development</p>
+                    <p class="contributor-description">
+                        Making the actual real deal - building the core OS, packaging tools, debugging, and everything
+                        that
+                        makes HorizonSec powerful.
+                    </p>
+                    <div class="contributor-badge">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
+                            <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+                        </svg>
+                        Core Developer
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="download" class="download">
+        <div class="container">
+            <div class="download-card">
+                <h2 class="section-title">Get Started Today</h2>
+                <p class="section-description">
+                    Download HorizonSec and join the next generation of security professionals
+                </p>
+
+                <div class="download-options">
+                    <div class="download-option">
+                        <div class="download-icon">
+                            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <line x1="2" y1="12" x2="22" y2="12"></line>
+                                <path
+                                    d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z">
+                                </path>
+                            </svg>
+                        </div>
+                        <h3 class="download-title">ISO Image</h3>
+                        <p class="download-description">Full installation image for bare metal or VM</p>
+                        <div class="download-size">2.8 GB</div>
+                        <button class="btn btn-download">
+                            <svg class="btn-icon" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="2">
+                                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                                <polyline points="7 10 12 15 17 10"></polyline>
+                                <line x1="12" y1="15" x2="12" y2="3"></line>
+                            </svg>
+                            Download ISO
+                        </button>
+                    </div>
+
+                    <div class="download-option">
+                        <div class="download-icon">
+                            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <polyline points="16 18 22 12 16 6"></polyline>
+                                <polyline points="8 6 2 12 8 18"></polyline>
+                            </svg>
+                        </div>
+                        <h3 class="download-title">Source Code</h3>
+                        <p class="download-description">Build from source and customize</p>
+                        <div class="download-size">GitHub</div>
+                        <button class="btn btn-download">
+                            <svg class="btn-icon" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="2">
+                                <path
+                                    d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
+                                </path>
+                            </svg>
+                            View on GitHub
+                        </button>
+                    </div>
+                </div>
+
+                <div class="download-footer">
+                    <p class="download-note">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <line x1="12" y1="16" x2="12" y2="12"></line>
+                            <line x1="12" y1="8" x2="12.01" y2="8"></line>
+                        </svg>
+                        For educational and authorized testing purposes only. Always obtain proper authorization before
+                        testing.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="footer-logo">Horizon<span class="logo-accent">Sec</span></div>
+                    <p class="footer-tagline">Security testing, simplified.</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4 class="footer-heading">Resources</h4>
+                        <a href="#" class="footer-link">Documentation</a>
+                        <a href="#" class="footer-link">Community</a>
+                        <a href="#" class="footer-link">Support</a>
+                    </div>
+                    <div class="footer-column">
+                        <h4 class="footer-heading">Project</h4>
+                        <a href="#" class="footer-link">GitHub</a>
+                        <a href="#" class="footer-link">Changelog</a>
+                        <a href="#" class="footer-link">License</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p class="footer-copyright">© 2025 HorizonSec. Made with simplicity in mind.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
