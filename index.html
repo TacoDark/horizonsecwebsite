@@ -1,253 +1,255 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HorizonSec - Arch-Based Penetration Testing OS</title>
-    <meta name="description"
-        content="HorizonSec is a powerful Arch-based Linux distribution designed for penetration testing and security research.">
+    <title>HorizonSec | Advanced Pen-Testing Distro</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+    
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <style>
+        :root {
+            --horizon-black: #0a0a0a;
+            --horizon-gold: #fbbf24;
+            --horizon-gray: #27272a;
+        }
+
+        body {
+            background-color: var(--horizon-black);
+            color: #e5e5e5;
+            font-family: 'Inter', sans-serif;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, .mono-font {
+            font-family: 'JetBrains Mono', monospace;
+        }
+
+        .gold-text {
+            background: linear-gradient(to right, #fbbf24, #d97706);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .terminal-window {
+            background-color: #050505;
+            border: 1px solid #333;
+            box-shadow: 0 0 40px rgba(251, 191, 36, 0.1);
+        }
+
+        .ascii-art {
+            font-size: 5px;
+            line-height: 5px;
+            white-space: pre;
+            color: var(--horizon-gold);
+            text-shadow: 0 0 10px rgba(251, 191, 36, 0.4);
+            overflow-x: hidden;
+        }
+        @media (min-width: 768px) {
+            .ascii-art {
+                font-size: 8px;
+                line-height: 8px;
+            }
+        }
+        
+        .feature-card {
+            transition: all 0.3s ease;
+        }
+        .feature-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--horizon-gold);
+            box-shadow: 0 10px 30px -10px rgba(251, 191, 36, 0.2);
+        }
+    </style>
 </head>
+<body class="antialiased selection:bg-yellow-900 selection:text-white">
 
-<body>
-    <!-- Background Effects -->
-    <div class="bg-grid"></div>
-    <div class="bg-gradient"></div>
-
-    <!-- Navigation -->
-    <nav class="nav">
-        <div class="nav-container">
-            <div class="nav-logo">
-                <span class="logo-text">Horizon<span class="logo-accent">Sec</span></span>
-            </div>
-            <div class="nav-links">
-                <a href="#home" class="nav-link active">Home</a>
-                <a href="#features" class="nav-link">Features</a>
-                <a href="#about" class="nav-link">About</a>
-                <a href="#contributors" class="nav-link">Contributors</a>
-                <a href="#download" class="nav-link">Download</a>
+    <nav class="fixed w-full z-50 bg-black/90 backdrop-blur-md border-b border-white/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-28">
+                <div class="flex items-center gap-4">
+                    <img src="https://i.imgur.com/53YUr7j.png" alt="HorizonSec Logo" class="w-24 h-24 object-contain drop-shadow-[0_0_8px_rgba(251,191,36,0.5)]">
+                    <span class="mono-font text-2xl font-bold tracking-tighter text-white">HORIZON<span class="text-amber-400">SEC</span></span>
+                </div>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-8">
+                        <a href="#features" class="mono-font text-sm hover:text-amber-400 transition-colors">Features</a>
+                        <a href="#team" class="mono-font text-sm hover:text-amber-400 transition-colors">Team</a>
+                        <a href="#download" class="mono-font text-xs border border-amber-500/50 hover:bg-amber-500/10 text-amber-400 px-4 py-2 rounded transition-all">
+                            Download
+                        </a>
+                    </div>
+                </div>
             </div>
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <section id="home" class="hero">
-        <div class="hero-content">
-            <div class="hero-badge">
-                <span class="badge-dot"></span>
-                Arch-Based Pentesting OS
-            </div>
-            <h1 class="hero-title">
-                Security Testing,<br>
-                <span class="gradient-text">Simplified</span>
+    <section class="min-h-screen flex flex-col justify-center items-center pt-20 relative overflow-hidden">
+        <div class="absolute top-0 left-0 w-full h-full bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-amber-900/20 via-black to-black"></div>
+        
+        <div class="text-center z-10 px-4 max-w-5xl mx-auto w-full">
+            <pre class="ascii-art mb-8 font-bold animate-pulse hidden md:block w-full text-center">
+*%                                     
+                                                             @@++-                                   
+                                                             %+@@                                    
+                                                            ==@                                      
+                                                      #*@% @@@                                       
+                                                  @   =  @@%@                                        
+                                            @%   *=@    @+@#@*@                                      
+                                             +@  @@# @%@:@=- %@%                                     
+                                       @-=@  +=@ +#@#=@:#=  @                                        
+                                         *-:%%+%=#@-=@:+==%#                                         
+                                     @+   *+@@::-%==@-*=:%* @                                    
+                                      @*:--@-=::-*:@-*=:=%@+%=*@                                     
+                                        @@+-=:-:::@-#=:+@%==:                                        
+                                   %::*-=-%:==:===#@@@+=+=@+++%+@                                    
+                                     %%++*%==-=========++=#==@                                       
+                                        @=@%+======+=+=++%++#@                                       
+                                     @+%+*@-@=++===++++=@@@@@=+#                                     
+                                    @    @=@+*@==+++==@+:%+@                                         
+                                        %-*@ @=+@=@+%=+@+@=+                                         
+                                       @%%  @*=+ #:+* =+-  #+%                                       
+                                       * @:+@  @-#  @+                                             
+                                          @:+@   @+     @                                            
+                                         +-+@     @+                                                 
+                                         @@
+            </pre>
+            
+            <pre class="ascii-art mb-8 font-bold animate-pulse block md:hidden text-center text-[6px] leading-[6px]">
+               /\
+              |  |
+          ____|  |____
+         /____    ____\
+              |  |
+              |  |
+              \  /
+               \/
+            </pre>
+
+            <h1 class="text-5xl md:text-7xl font-extrabold mb-6 tracking-tight text-white">
+                VISIBILITY <span class="gold-text">UNRESTRICTED</span>
             </h1>
-            <p class="hero-description">
-                HorizonSec is a powerful, lightweight penetration testing distribution built on Arch Linux.
-                Designed for security professionals who demand speed, flexibility, and cutting-edge tools.
+            <p class="text-gray-400 text-lg md:text-xl max-w-2xl mx-auto mb-10 font-light">
+                An Arch-based security distribution engineered for advanced penetration testing and absolute privacy. 
+                Featuring the "Ghost Mode" transparent Tor proxy.
             </p>
-            <div class="hero-buttons">
-                <a href="#download" class="btn btn-primary">
-                    <svg class="btn-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                        stroke-width="2">
-                        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
-                        <polyline points="7 10 12 15 17 10"></polyline>
-                        <line x1="12" y1="15" x2="12" y2="3"></line>
-                    </svg>
-                    Download Now
+            
+            <div class="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8">
+                <a href="#download" class="mono-font bg-amber-500 hover:bg-amber-400 text-black font-bold py-3 px-8 rounded transition-all shadow-lg shadow-amber-500/20">
+                    Download ISO
                 </a>
-                <a href="#features" class="btn btn-secondary">
-                    Learn More
-                    <svg class="btn-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                        stroke-width="2">
-                        <line x1="5" y1="12" x2="19" y2="12"></line>
-                        <polyline points="12 5 19 12 12 19"></polyline>
-                    </svg>
-                </a>
+                <div class="mono-font text-gray-500 text-xs flex items-center gap-2">
+                    <span class="w-2 h-2 rounded-full bg-green-500 animate-pulse"></span>
+                    Latest Build: 2024.11
+                </div>
             </div>
 
-            <!-- Terminal Preview -->
-            <div class="terminal-preview">
-                <div class="terminal-header">
-                    <div class="terminal-buttons">
-                        <span class="terminal-btn terminal-btn-close"></span>
-                        <span class="terminal-btn terminal-btn-minimize"></span>
-                        <span class="terminal-btn terminal-btn-maximize"></span>
-                    </div>
-                    <div class="terminal-title">you@horizonsec</div>
-                </div>
-                <div class="terminal-body">
-                    <div class="terminal-line">
-                        <span class="terminal-prompt">$</span>
-                        <span class="terminal-command">fastfetch</span>
-                    </div>
-                    <div class="terminal-line terminal-output">
-                        <span class="terminal-info">OS: HorizonSec Linux x86_64</span>
-                    </div>
-                    <div class="terminal-line terminal-output">
-                        <span class="terminal-info">Kernel: 6.6.x-arch1-1</span>
-                    </div>
-                    <div class="terminal-line terminal-output">
-                        <span class="terminal-info">Shell: zsh 5.9</span>
-                    </div>
-                    <div class="terminal-line">
-                        <span class="terminal-prompt">$</span>
-                        <span class="terminal-command typing-animation">nmap -sV target.local</span>
-                    </div>
-                </div>
+            <div class="h-8 flex items-center justify-center">
+                <p id="quote-display" class="mono-font text-amber-500/80 text-sm md:text-base italic"></p>
+                <span id="cursor" class="w-2 h-4 bg-amber-500 inline-block ml-1 animate-pulse"></span>
             </div>
         </div>
     </section>
 
-    <!-- Features Section -->
-    <section id="features" class="features">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Built for Starters and professionals</h2>
-                <p class="section-description">Everything you need for comprehensive security testing</p>
+    <section id="features" class="py-24 bg-zinc-900/30 border-y border-white/5">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-white mb-4">Core Capabilities</h2>
+                <p class="text-gray-400">Built on a hardened Arch Linux foundation.</p>
             </div>
 
-            <div class="features-grid">
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                            stroke-width="2">
-                            <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
-                            <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
-                        </svg>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="feature-card bg-black border border-white/10 p-8 rounded-xl relative overflow-hidden">
+                    <div class="absolute top-0 right-0 p-4 opacity-10">
+                        <i data-lucide="ghost" class="w-24 h-24 text-white"></i>
                     </div>
-                    <h3 class="feature-title">Arch-Based</h3>
-                    <p class="feature-description">
-                        Built on Arch Linux for maximum performance, flexibility, and access to the latest tools
-                        through the AUR.
+                    <div class="w-12 h-12 bg-amber-500/10 rounded-lg flex items-center justify-center mb-6">
+                        <i data-lucide="shield-check" class="text-amber-500 w-6 h-6"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">Ghost Mode</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">
+                        A system-wide transparent Tor proxy switch. Route all traffic through the anonymity network instantly with a single click or command.
                     </p>
                 </div>
 
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                            stroke-width="2">
-                            <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
-                            <polyline points="2 17 12 22 22 17"></polyline>
-                            <polyline points="2 12 12 17 22 12"></polyline>
-                        </svg>
+                <div class="feature-card bg-black border border-white/10 p-8 rounded-xl relative overflow-hidden">
+                    <div class="absolute top-0 right-0 p-4 opacity-10">
+                        <i data-lucide="sword" class="w-24 h-24 text-white"></i>
                     </div>
-                    <h3 class="feature-title">Comprehensive Toolkit</h3>
-                    <p class="feature-description">
-                        Pre-installed with industry-standard tools for network analysis, vulnerability assessment, and
-                        exploitation.
+                    <div class="w-12 h-12 bg-red-500/10 rounded-lg flex items-center justify-center mb-6">
+                        <i data-lucide="crosshair" class="text-red-500 w-6 h-6"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">Hybrid Arsenal</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">
+                        Pre-loaded with industry-standard GUI tools (Burp Suite, Zenmap, Ghidra) and essential TUI utilities (Metasploit, Nmap, Aircrack-ng).
                     </p>
                 </div>
 
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                            stroke-width="2">
-                            <circle cx="12" cy="12" r="10"></circle>
-                            <polyline points="12 6 12 12 16 14"></polyline>
-                        </svg>
+                <div class="feature-card bg-black border border-white/10 p-8 rounded-xl relative overflow-hidden">
+                    <div class="absolute top-0 right-0 p-4 opacity-10">
+                        <i data-lucide="lock" class="w-24 h-24 text-white"></i>
                     </div>
-                    <h3 class="feature-title">Lightweight & Fast</h3>
-                    <p class="feature-description">
-                        We removed as much bloat as we can, creating faster boot times, efficient resource usage, and
-                        more power for your security tasks.
-                    </p>
-                </div>
-
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                            stroke-width="2">
-                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
-                        </svg>
+                    <div class="w-12 h-12 bg-blue-500/10 rounded-lg flex items-center justify-center mb-6">
+                        <i data-lucide="cpu" class="text-blue-500 w-6 h-6"></i>
                     </div>
-                    <h3 class="feature-title">Security First</h3>
-                    <p class="feature-description">
-                        Hardened kernel, secure defaults, and regular updates to keep you protected while testing
-                        others.
-                    </p>
-                </div>
-
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                            stroke-width="2">
-                            <path
-                                d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z">
-                            </path>
-                            <polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
-                            <line x1="12" y1="22.08" x2="12" y2="12"></line>
-                        </svg>
-                    </div>
-                    <h3 class="feature-title">Customizable</h3>
-                    <p class="feature-description">
-                        Full control over your environment. Configure, tweak, and optimize every aspect to match your
-                        workflow.
-                    </p>
-                </div>
-
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                            stroke-width="2">
-                            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
-                            <circle cx="9" cy="7" r="4"></circle>
-                            <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
-                            <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
-                        </svg>
-                    </div>
-                    <h3 class="feature-title">Community Driven</h3>
-                    <p class="feature-description">
-                        Join a growing community of security professionals sharing knowledge, tools, and techniques.
+                    <h3 class="text-xl font-bold text-white mb-3">Hardened Kernel</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">
+                        Runs on <code>linux-hardened</code> by default. Includes automated MAC randomization and strict firewall rules out of the box.
                     </p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- About Section -->
-    <section id="about" class="about">
-        <div class="container">
-            <div class="about-content">
-                <div class="about-text">
-                    <h2 class="section-title">About HorizonSec</h2>
-                    <p class="about-paragraph">
-                        HorizonSec was created by security professionals, for security professionals. We recognized
-                        the need for a penetration testing distribution that combines the power and flexibility of
-                        Arch Linux with a curated selection of security tools.
-                    </p>
-                    <p class="about-paragraph">
-                        Unlike bloated alternatives, HorizonSec gives you exactly what you need, nothing more, nothing
-                        less. Whether you're conducting network assessments, web application testing, or wireless
-                        security audits, HorizonSec provides a solid foundation to build upon.
-                    </p>
-                    <div class="about-stats">
-                        <div class="stat">
-                            <div class="stat-value">20+</div>
-                            <div class="stat-label">Security Tools</div>
-                        </div>
-                        <div class="stat">
-                            <div class="stat-value">Rolling</div>
-                            <div class="stat-label">Release Model</div>
-                        </div>
-                        <div class="stat">
-                            <div class="stat-value">Open</div>
-                            <div class="stat-label">Source</div>
+    <section id="team" class="py-24 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center gap-4 mb-12">
+                <div class="h-px bg-white/20 flex-1"></div>
+                <h2 class="text-2xl font-bold text-white tracking-widest uppercase">The Architects</h2>
+                <div class="h-px bg-white/20 flex-1"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-4xl mx-auto">
+                <!-- Wyind -->
+                <div class="group relative">
+                    <div class="absolute -inset-1 bg-gradient-to-r from-amber-600 to-red-600 rounded-lg blur opacity-25 group-hover:opacity-75 transition duration-1000 group-hover:duration-200"></div>
+                    <div class="relative bg-black border border-white/10 p-8 rounded-lg flex items-start gap-6">
+                        <!-- PROFILE PICTURE -->
+                        <img src="https://i.imgur.com/myUo6li.png" 
+                             alt="Wyind" 
+                             class="w-16 h-16 rounded-full border border-white/10 shrink-0 object-cover bg-zinc-800">
+                        
+                        <div>
+                            <h3 class="text-xl font-bold text-white">Wyind</h3>
+                            <p class="text-amber-500 text-xs font-bold mb-4 uppercase tracking-wider">Core Development Lead</p>
+                            <p class="text-gray-400 text-sm">
+                                Responsible for the system architecture, kernel hardening, installer logic, and the "Ghost Mode" implementation. Architect of the core OS experience.
+                            </p>
                         </div>
                     </div>
                 </div>
-                <div class="about-visual">
-                    <div class="code-block">
-                        <div class="code-header">
-                            <span class="code-title">install.sh</span>
-                        </div>
-                        <div class="code-content">
-                            <code class="code-line"><span class="code-comment">As simple as an iso file.</span></code>
+
+                <!-- Ryan -->
+                <div class="group relative">
+                    <div class="absolute -inset-1 bg-gradient-to-r from-blue-600 to-cyan-600 rounded-lg blur opacity-25 group-hover:opacity-75 transition duration-1000 group-hover:duration-200"></div>
+                    <div class="relative bg-black border border-white/10 p-8 rounded-lg flex items-start gap-6">
+                        <!-- PROFILE PICTURE -->
+                        <img src="https://i.imgur.com/GACyHTe.png" 
+                             alt="Ryan" 
+                             class="w-16 h-16 rounded-full border border-white/10 shrink-0 object-cover bg-zinc-800">
+                        
+                        <div>
+                            <h3 class="text-xl font-bold text-white">Ryan</h3>
+                            <p class="text-blue-500 text-xs font-bold mb-4 uppercase tracking-wider">Web & Experience Lead</p>
+                            <p class="text-gray-400 text-sm">
+                                In charge of web infrastructure, UI/UX design, and ensuring the ecosystem runs smoothly for the end-user.
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -255,164 +257,93 @@
         </div>
     </section>
 
-    <!-- Download Section -->
-    <!-- Contributors Section -->
-    <section id="contributors" class="contributors">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Meet the Team</h2>
-                <p class="section-description">The people behind HorizonSec</p>
+    <section id="download" class="py-24 bg-zinc-900/50 border-t border-white/5">
+        <div class="max-w-5xl mx-auto px-4 text-center">
+            <h2 class="text-3xl font-bold text-white mb-8">Ready to deploy?</h2>
+            
+            <div class="bg-black border border-white/10 p-8 rounded-2xl inline-block w-full max-w-2xl">
+                <div class="flex flex-col md:flex-row items-center justify-between gap-6">
+                    <div class="text-left w-full">
+                        <div class="flex items-center gap-3 mb-2">
+                            <span class="text-white font-bold text-lg">HorizonSec.iso</span>
+                            <span class="bg-amber-500/20 text-amber-500 text-xs px-2 py-1 rounded">x86_64</span>
+                        </div>
+                        <div class="font-mono text-xs text-gray-500 bg-zinc-900 p-3 rounded border border-white/5 break-all">
+                            SHA256: 7f83b1657ff1fc53b92dc18148a1d65dfc2d4b1fa3d677284addd200126d9e9a1
+                        </div>
+                    </div>
+                    
+                    <button class="w-full md:w-auto bg-white text-black hover:bg-gray-200 font-bold py-3 px-6 rounded-lg flex items-center justify-center gap-2 transition-colors">
+                        <i data-lucide="download" class="w-4 h-4"></i> Download
+                    </button>
+                </div>
             </div>
-
-            <div class="contributors-grid">
-                <div class="contributor-card">
-                    <div class="contributor-avatar">
-                        <img src="pfp/ryan.png" alt="Ryan - Website Developer">
-                        <div class="avatar-border"></div>
-                    </div>
-                    <h3 class="contributor-name">Ryan</h3>
-                    <p class="contributor-role">Website Development</p>
-                    <p class="contributor-description">
-                        Does all the misc stuff - from crafting the web presence to handling the little details that
-                        make everything work smoothly.
-                    </p>
-                    <div class="contributor-badge">
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                            stroke-width="2">
-                            <polyline points="16 18 22 12 16 6"></polyline>
-                            <polyline points="8 6 2 12 8 18"></polyline>
-                        </svg>
-                        Developer
-                    </div>
-                </div>
-
-                <div class="contributor-card">
-                    <div class="contributor-avatar">
-                        <img src="pfp/wyind.png" alt="Wyind - Core Developer">
-                        <div class="avatar-border"></div>
-                    </div>
-                    <h3 class="contributor-name">Wyind</h3>
-                    <p class="contributor-role">Core Development</p>
-                    <p class="contributor-description">
-                        Making the actual real deal - building the core OS, packaging tools, debugging, and everything
-                        that makes HorizonSec powerful.
-                    </p>
-                    <div class="contributor-badge">
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                            stroke-width="2">
-                            <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
-                            <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
-                        </svg>
-                        Core Developer
-                    </div>
-                </div>
+            
+            <div class="mt-16 text-gray-600 text-sm">
+                &copy; 2025 Team Horizon. <span class="text-amber-600">teamhorizon.org</span>
             </div>
         </div>
     </section>
 
-    <section id="download" class="download">
-        <div class="container">
-            <div class="download-card">
-                <h2 class="section-title">Get Started Today</h2>
-                <p class="section-description">
-                    Download HorizonSec and join the next generation of security professionals
-                </p>
+    <script>
+        lucide.createIcons();
 
-                <div class="download-options">
-                    <div class="download-option">
-                        <div class="download-icon">
-                            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                stroke-width="2">
-                                <circle cx="12" cy="12" r="10"></circle>
-                                <line x1="2" y1="12" x2="22" y2="12"></line>
-                                <path
-                                    d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z">
-                                </path>
-                            </svg>
-                        </div>
-                        <h3 class="download-title">ISO Image</h3>
-                        <p class="download-description">Full installation image for bare metal or VM</p>
-                        <div class="download-size">2.8 GB</div>
-                        <button class="btn btn-download">
-                            <svg class="btn-icon" width="20" height="20" viewBox="0 0 24 24" fill="none"
-                                stroke="currentColor" stroke-width="2">
-                                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
-                                <polyline points="7 10 12 15 17 10"></polyline>
-                                <line x1="12" y1="15" x2="12" y2="3"></line>
-                            </svg>
-                            Download ISO
-                        </button>
-                    </div>
+        const quotes = [
+            "\"Molon labe.\" - King Leonidas I",
+            "\"Know thyself.\" - Inscription at Delphi",
+            "\"The strong do what they can and the weak suffer what they must.\" - Thucydides",
+            "\"Discipline is the mother of success.\" - Aeschylus",
+            "\"We make war that we may live in peace.\" - Aristotle",
+            "\"There is no harm in repeating a good thing.\" - Plato",
+            "\"Time is the wisest counselor of all.\" - Pericles",
+            "\"The descent to the Underworld is easy.\" - Virgil",
+            "\"No one loves the messenger who brings bad news.\" - Sophocles",
+            "\"I know that I know nothing.\" - Socrates",
+            "\"It is not what happens to you, but how you react to it that matters.\" - Epictetus",
+            "\"Wait for the wisest of all counselors, Time.\" - Pericles",
+            "\"Knowledge without justice ought to be called cunning rather than wisdom.\" - Plato",
+            "\"bios beep codes and red power lights scare me.\" -wyind",
+            "\"sudo apt install opsec\" -wyind",
+            "\"beep codes are my love language\" -ryan"
+        ];
 
-                    <div class="download-option">
-                        <div class="download-icon">
-                            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                stroke-width="2">
-                                <polyline points="16 18 22 12 16 6"></polyline>
-                                <polyline points="8 6 2 12 8 18"></polyline>
-                            </svg>
-                        </div>
-                        <h3 class="download-title">Source Code</h3>
-                        <p class="download-description">Build from source and customize</p>
-                        <div class="download-size">GitHub</div>
-                        <button class="btn btn-download">
-                            <svg class="btn-icon" width="20" height="20" viewBox="0 0 24 24" fill="none"
-                                stroke="currentColor" stroke-width="2">
-                                <path
-                                    d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
-                                </path>
-                            </svg>
-                            View on GitHub
-                        </button>
-                    </div>
-                </div>
+        const quoteElement = document.getElementById('quote-display');
+        const cursorElement = document.getElementById('cursor');
+        
+        let quoteIndex = 0;
+        let charIndex = 0;
+        let isDeleting = false;
+        let typeSpeed = 50;
 
-                <div class="download-footer">
-                    <p class="download-note">
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                            stroke-width="2">
-                            <circle cx="12" cy="12" r="10"></circle>
-                            <line x1="12" y1="16" x2="12" y2="12"></line>
-                            <line x1="12" y1="8" x2="12.01" y2="8"></line>
-                        </svg>
-                        For educational and authorized testing purposes only. Always obtain proper authorization before
-                        testing.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
+        function typeWriter() {
+            const currentQuote = quotes[quoteIndex];
 
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-brand">
-                    <div class="footer-logo">Horizon<span class="logo-accent">Sec</span></div>
-                    <p class="footer-tagline">Security testing, simplified.</p>
-                </div>
-                <div class="footer-links">
-                    <div class="footer-column">
-                        <h4 class="footer-heading">Resources</h4>
-                        <a href="#" class="footer-link">Documentation</a>
-                        <a href="#" class="footer-link">Community</a>
-                        <a href="#" class="footer-link">Support</a>
-                    </div>
-                    <div class="footer-column">
-                        <h4 class="footer-heading">Project</h4>
-                        <a href="#" class="footer-link">GitHub</a>
-                        <a href="#" class="footer-link">Changelog</a>
-                        <a href="#" class="footer-link">License</a>
-                    </div>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p class="footer-copyright">© 2025 HorizonSec. Made with simplicity in mind.</p>
-            </div>
-        </div>
-    </footer>
+            if (isDeleting) {
+                quoteElement.textContent = currentQuote.substring(0, charIndex - 1);
+                charIndex--;
+                typeSpeed = 30;
+            } else {
+                quoteElement.textContent = currentQuote.substring(0, charIndex + 1);
+                charIndex++;
+                typeSpeed = 50;
+            }
 
-    <script src="script.js"></script>
+            if (!isDeleting && charIndex === currentQuote.length) {
+                isDeleting = true;
+                typeSpeed = 3000;
+                cursorElement.style.display = 'inline-block';
+            } else if (isDeleting && charIndex === 0) {
+                isDeleting = false;
+                quoteIndex = (quoteIndex + 1) % quotes.length;
+                typeSpeed = 500;
+            }
+
+            setTimeout(typeWriter, typeSpeed);
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            typeWriter();
+        });
+    </script>
 </body>
-
 </html>
